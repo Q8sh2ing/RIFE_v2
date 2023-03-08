@@ -228,7 +228,7 @@ while True:
     ssim = ssim_matlab(I0_small[:, :3], I1_small[:, :3])
 
     break_flag = False
-    if ssim > 0.996:        
+    if ssim > 1:        
         frame = read_buffer.get() # read a new frame
         if frame is None:
             break_flag = True
