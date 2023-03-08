@@ -242,7 +242,7 @@ while True:
         ssim = ssim_matlab(I0_small[:, :3], I1_small[:, :3])
         frame = (I1[0] * 255).byte().cpu().numpy().transpose(1, 2, 0)[:h, :w]
     
-    if ssim < 0.2:
+    if ssim < 0.1:
         output = []
         for i in range((2 ** args.exp) - 1):
             output.append(I0)
